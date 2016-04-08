@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson1</title>
+</head>
+<body>
+	<img id = "c1" onClick = "clicked(this.id)" src="cat1.jpg"/>
+	<img id = "c2" onClick = "clicked(this.id)" src="cat2.jpg"/>
+	<img id = "c3" onClick = "clicked(this.id)" src="cat3.jpg"/>
+	<img id = "c4" onClick = "clicked(this.id)" src="cat4.jpg"/>
+	<img id = "c5" onClick = "clicked(this.id)" src="cat5.jpg"/>
+<br>
+	First kitten: <span id="c11"></span> <br>
+	Second kitten: <span id="c21"></span> <br>
+	Third kitten: <span id="c31"></span> <br>
+	Fourth kitten: <span id="c41"></span><br>
+	Fifth kitten: <span id="c51"></span><br>
+
+	<p id="p"></p>
+	
+</body>
+	<script type="text/javascript">
+		var count = [0,0,0,0,0];
+		var ids = ['c1','c2','c3','c4','c5'];
+		function clicked(clicked_id){
+			var index = ids.indexOf(clicked_id);
+			count[index] = count[index] + 1;
+			// document.getElementById("p").innerHTML="The kitten clicked is " + clicked_id + ". Nicely played";
+			document.getElementById(clicked_id+1).innerHTML=  count[index];
+		}
+	</script>
+</html>
